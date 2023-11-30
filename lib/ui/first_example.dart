@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/adapters.dart';
+import 'package:hive_package_database/ui/second_example.dart';
 
 class FirstExamplePage extends StatefulWidget {
   const FirstExamplePage({super.key});
@@ -16,6 +17,9 @@ class _FirstExamplePageState extends State<FirstExamplePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(onPressed: () {
+        Navigator.push(context, MaterialPageRoute(builder: (context) => const SecondExample()));
+      }),
       body: Container(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
